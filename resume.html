@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Résumé — Akmal Shapii, Data Engineer at REV Media Group." />
+    <title>Resume — Akmal Shapii</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- ── NAVIGATION ──────────────────────────────────────── -->
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">AS</a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="resume.html" class="nav-link active">Resume</a>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+                <span class="toggle-icon">☀</span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- ── PAGE HERO ─────────────────────────────────────── -->
+        <div class="page-hero">
+            <div class="page-hero-label">Curriculum Vitae</div>
+            <h1 class="page-hero-title">Akmal Shapii</h1>
+            <p class="page-hero-sub">Data Engineer · REV Media Group · Kuala Lumpur, Malaysia</p>
+            <p class="page-hero-sub" style="margin-top: 0.3rem;">
+                <a href="mailto:akmal.shapii@gmail.com" style="color: var(--accent);">akmal.shapii@gmail.com</a>
+                &nbsp;·&nbsp;
+                <a href="https://linkedin.com/in/akmal-shapii/" target="_blank" rel="noopener"
+                    style="color: var(--accent);">linkedin.com/in/akmal-shapii</a>
+                &nbsp;·&nbsp;
+                <a href="https://github.com/akmalshapii" target="_blank" rel="noopener"
+                    style="color: var(--accent);">github.com/akmalshapii</a>
+            </p>
+            <!-- Replace href="#" with the actual path to your PDF once you add it -->
+            <a href="#" class="btn btn--accent" download="Akmal_Shapii_Resume.pdf">↓ Download PDF</a>
+        </div>
+
+        <!-- ── EXPERIENCE ─────────────────────────────────────── -->
+        <div class="resume-section">
+            <div class="resume-section-title">Experience</div>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-period">Jun 2021<br>— Present</div>
+                    <div class="timeline-body">
+                        <div class="timeline-role">Data Engineer</div>
+                        <div class="timeline-company">REV Media Group · Kuala Lumpur, Malaysia</div>
+                        <div class="timeline-desc">
+                            <ul>
+                                <li>Design and maintain data pipelines using Google Cloud Composer (Apache Airflow 2.x)
+                                    to orchestrate daily ETL/ELT workflows across BigQuery, Cloud Storage, and
+                                    Elasticsearch.</li>
+                                <li>Built an advanced analytics pipeline integrating the Gemini API for automated
+                                    keyword extraction, sentiment analysis, and emotion detection across millions of
+                                    article records.</li>
+                                <li>Developed and maintained article metadata pipelines for the Data Science team,
+                                    enabling the Content Summary project to generate AI-powered article summaries at
+                                    scale.</li>
+                                <li>Work closely with Data Analysts and Data Scientists to model and deliver clean,
+                                    reliable datasets in BigQuery for analytics and machine learning use cases.</li>
+                                <li>Standardise pipeline development practices across the Data Team — modular DAG
+                                    architecture, config-driven parameters, and GCS-based data management strategies.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── EDUCATION ──────────────────────────────────────── -->
+        <div class="resume-section">
+            <div class="resume-section-title">Education</div>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <!-- TODO: fill in your graduation year and degree details -->
+                    <div class="timeline-period"><!-- e.g. 2017 – 2021 --></div>
+                    <div class="timeline-body">
+                        <div class="timeline-role"><!-- e.g. Bachelor of Computer Science --></div>
+                        <div class="timeline-company"><!-- e.g. Universiti Teknologi MARA (UiTM) --></div>
+                        <div class="timeline-desc"><!-- Optional: CGPA, relevant coursework, etc. --></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── SKILLS ─────────────────────────────────────────── -->
+        <div class="resume-section">
+            <div class="resume-section-title">Skills &amp; Technologies</div>
+            <div class="skills-grid-resume">
+
+                <div>
+                    <div class="skill-group-title">Languages</div>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="skill-group-title">GCP Services</div>
+                    <ul class="skill-list">
+                        <li>BigQuery</li>
+                        <li>Cloud Composer</li>
+                        <li>Cloud Storage</li>
+                        <li>Cloud Functions</li>
+                        <li>Vertex AI</li>
+                        <li>Looker Studio</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="skill-group-title">Tools &amp; Platforms</div>
+                    <ul class="skill-list">
+                        <li>Apache Airflow</li>
+                        <li>Elasticsearch</li>
+                        <li>Gemini API</li>
+                        <li>Git / Bitbucket</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── CONTACT ────────────────────────────────────────── -->
+        <div class="resume-section">
+            <div class="resume-section-title">Contact</div>
+
+            <div class="contact-row">
+                <span class="contact-label">Email</span>
+                <a href="mailto:akmal.shapii@gmail.com">akmal.shapii@gmail.com</a>
+            </div>
+            <div class="contact-row">
+                <span class="contact-label">LinkedIn</span>
+                <a href="https://linkedin.com/in/akmal-shapii/" target="_blank"
+                    rel="noopener">linkedin.com/in/akmal-shapii</a>
+            </div>
+            <div class="contact-row">
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com/akmalshapii" target="_blank" rel="noopener">github.com/akmalshapii</a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ── FOOTER ────────────────────────────────────────────── -->
+    <footer class="footer">
+        <p>© 2025 Akmal Shapii · Built with plain HTML, CSS &amp; JS</p>
+        <div class="footer-links">
+            <a href="mailto:akmal.shapii@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/akmal-shapii/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/akmalshapii" target="_blank" rel="noopener">GitHub</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
