@@ -1,0 +1,11 @@
+<nav class="nav">
+    <a href="{{ '/' | relative_url }}" class="nav-logo">AS</a>
+    <div class="nav-links">
+        <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a>
+        <a href="{{ '/resume' | relative_url }}"
+            class="nav-link {% if page.url contains 'resume' %}active{% endif %}">Resume</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+            <span class="toggle-icon">☀</span>
+        </button>
+    </div>
+</nav>

@@ -1,238 +1,136 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
+---
+layout: default
+title: Home
+---
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Akmal Shapii — Data Engineer at REV Media Group. Building data pipelines on Google Cloud Platform." />
-    <title>Akmal Shapii — Data Engineer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
-</head>
+<!-- ── HERO ──────────────────────────────────────────────── -->
+<section class="hero">
+    <div class="hero-label">Data Engineer · Malaysia</div>
+    <h1 class="hero-name">Akmal<br>Shapii.</h1>
+    <p class="hero-bio">
+        Building the infrastructure that turns raw data into insight —
+        pipelines, transformations, and everything in between.
+        Based in Malaysia, working with GCP every day since 2021.
+    </p>
+    <div class="hero-links">
+        <a href="mailto:{{ site.email }}" class="hero-link">Email</a>
+        <a href="https://linkedin.com/in/{{ site.linkedin_username }}/" class="hero-link" target="_blank"
+            rel="noopener">LinkedIn</a>
+        <a href="https://github.com/{{ site.github_username }}" class="hero-link" target="_blank"
+            rel="noopener">GitHub</a>
+        <a href="{{ '/resume' | relative_url }}" class="hero-link hero-link--accent">Resume →</a>
+    </div>
+</section>
 
-<body>
+<!-- ── PROJECTS ──────────────────────────────────────────── -->
+<section class="section" id="projects">
+    <div class="section-header">
+        <span class="section-label">Work</span>
+        <h2 class="section-title">Projects</h2>
+    </div>
 
-    <!-- ── NAVIGATION ──────────────────────────────────────── -->
-    <nav class="nav">
-        <a href="index.html" class="nav-logo">AS</a>
-        <div class="nav-links">
-            <a href="index.html" class="nav-link active">Home</a>
-            <a href="resume.html" class="nav-link">Resume</a>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
-                <span class="toggle-icon">☀</span>
-            </button>
-        </div>
-    </nav>
-
-    <main>
-
-        <!-- ── HERO ──────────────────────────────────────────── -->
-        <section class="hero">
-            <div class="hero-label">Data Engineer · REV Media Group</div>
-            <h1 class="hero-name">Akmal<br>Shapii.</h1>
-            <p class="hero-bio">
-                Building the infrastructure that turns raw data into insight —
-                pipelines, transformations, and everything in between.
-                Based in Malaysia, working with GCP every day since 2021.
-            </p>
-            <div class="hero-links">
-                <a href="mailto:akmal.shapii@gmail.com" class="hero-link">Email</a>
-                <a href="https://linkedin.com/in/akmal-shapii/" class="hero-link" target="_blank"
-                    rel="noopener">LinkedIn</a>
-                <a href="https://github.com/akmalshapii" class="hero-link" target="_blank" rel="noopener">GitHub</a>
-                <a href="resume.html" class="hero-link hero-link--accent">Resume →</a>
+    <div class="projects-grid">
+        {% for project in site.data.projects %}
+        <article class="project-card {% if project.placeholder %}project-card--placeholder{% endif %}">
+            <div class="project-meta">
+                {% for tag in project.tags %}
+                <span class="project-tag">{{ tag }}</span>
+                {% endfor %}
             </div>
-        </section>
-
-        <!-- ── PROJECTS ──────────────────────────────────────── -->
-        <section class="section" id="projects">
-            <div class="section-header">
-                <span class="section-label">Work</span>
-                <h2 class="section-title">Projects</h2>
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-desc">{{ project.description }}</p>
+            <div class="project-footer">
+                <span class="project-company">{{ project.company }}</span>
             </div>
-
-            <div class="projects-grid">
-
-                <!-- Project 1 -->
-                <article class="project-card">
-                    <div class="project-meta">
-                        <span class="project-tag">Gemini API</span>
-                        <span class="project-tag">BigQuery</span>
-                        <span class="project-tag">Airflow</span>
-                        <span class="project-tag">Elasticsearch</span>
-                    </div>
-                    <h3 class="project-title">Advanced Analytics Pipeline</h3>
-                    <p class="project-desc">
-                        End-to-end content enrichment pipeline that generates keyword extraction,
-                        sentiment analysis, and emotion detection for articles across REV Media Group's
-                        sites — powered by Google's Gemini API and orchestrated via Cloud Composer.
-                    </p>
-                    <div class="project-footer">
-                        <span class="project-company">REV Media Group</span>
-                    </div>
-                </article>
-
-                <!-- Project 2 -->
-                <article class="project-card">
-                    <div class="project-meta">
-                        <span class="project-tag">Gemini API</span>
-                        <span class="project-tag">Cloud Storage</span>
-                        <span class="project-tag">BigQuery</span>
-                        <span class="project-tag">Airflow</span>
-                    </div>
-                    <h3 class="project-title">Content Summary Metadata Pipeline</h3>
-                    <p class="project-desc">
-                        Designed and maintained a pipeline that prepares clean, up-to-date article
-                        metadata for the Data Science team's content summarisation project —
-                        enabling AI-generated summaries of articles at scale using Gemini API.
-                    </p>
-                    <div class="project-footer">
-                        <span class="project-company">REV Media Group</span>
-                    </div>
-                </article>
-
-                <!-- Placeholder -->
-                <article class="project-card project-card--placeholder">
-                    <div class="project-meta">
-                        <span class="project-tag">Coming soon</span>
-                    </div>
-                    <h3 class="project-title">More on the way</h3>
-                    <p class="project-desc">
-                        This space is reserved for future projects. Check back soon.
-                    </p>
-                    <div class="project-footer">
-                        <span class="project-company">—</span>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- ── WRITINGS / NOTES ───────────────────────────────── -->
-        <section class="section" id="writings">
-            <div class="section-header">
-                <span class="section-label">Notes</span>
-                <h2 class="section-title">Writings</h2>
-            </div>
-
-            <div class="writings-list">
-
-                <!-- Placeholder writing -->
-                <article class="writing-item writing-item--placeholder">
-                    <span class="writing-date">—</span>
-                    <div class="writing-content">
-                        <h3 class="writing-title">Writings & notes coming soon</h3>
-                        <p class="writing-excerpt">
-                            I'll be sharing learnings, thoughts, and notes on data engineering,
-                            GCP architecture, and building reliable pipelines at scale.
-                        </p>
-                    </div>
-                </article>
-
-                <!-- Add future writings below in this format:
-        <article class="writing-item">
-          <span class="writing-date">Jan 2025</span>
-          <div class="writing-content">
-            <h3 class="writing-title">Your Title Here</h3>
-            <p class="writing-excerpt">Short description of the post.</p>
-          </div>
         </article>
-        -->
+        {% endfor %}
+    </div>
+</section>
 
+<!-- ── WRITINGS ───────────────────────────────────────────── -->
+<section class="section" id="writings">
+    <div class="section-header">
+        <span class="section-label">Notes</span>
+        <h2 class="section-title">Writings</h2>
+    </div>
+
+    <div class="writings-list">
+        {% if site.posts.size > 0 %}
+        {% for post in site.posts limit: 5 %}
+        <a href="{{ post.url | relative_url }}" class="writing-item">
+            <span class="writing-date">{{ post.date | date: "%b %Y" }}</span>
+            <div class="writing-content">
+                <h3 class="writing-title">{{ post.title }}</h3>
+                {% if post.excerpt %}
+                <p class="writing-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                {% endif %}
             </div>
-        </section>
+        </a>
+        {% endfor %}
 
-        <!-- ── ABOUT ──────────────────────────────────────────── -->
-        <section class="section" id="about">
-            <div class="section-header">
-                <span class="section-label">Me</span>
-                <h2 class="section-title">About</h2>
+        {% if site.posts.size > 5 %}
+        <div class="writings-more">
+            <a href="{{ '/writings' | relative_url }}" class="hero-link hero-link--accent">All writings →</a>
+        </div>
+        {% endif %}
+
+        {% else %}
+        <div class="writing-item writing-item--placeholder">
+            <span class="writing-date">—</span>
+            <div class="writing-content">
+                <h3 class="writing-title">Writings &amp; notes coming soon</h3>
+                <p class="writing-excerpt">
+                    I'll be sharing learnings, thoughts, and notes on data engineering,
+                    GCP architecture, and building reliable pipelines at scale.
+                </p>
             </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
 
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a Data Engineer at <strong>REV Media Group</strong>, one of Malaysia's
-                        leading digital media companies. I joined fresh out of university in
-                        June 2021 with no prior industry experience — and have been building
-                        production data systems on Google Cloud Platform ever since.
-                    </p>
-                    <p>
-                        My day-to-day revolves around designing and maintaining ETL/ELT workflows
-                        using <strong>Cloud Composer (Apache Airflow)</strong>, working with
-                        <strong>BigQuery</strong> for large-scale analytics, and integrating AI/ML
-                        capabilities via <strong>Vertex AI and Gemini APIs</strong>.
-                    </p>
-                    <p>
-                        I care deeply about building systems that are reliable, cost-efficient,
-                        and genuinely useful — whether the consumer is a Data Scientist, a
-                        Data Analyst, or a product team shipping a feature.
-                    </p>
-                </div>
+<!-- ── ABOUT ──────────────────────────────────────────────── -->
+<section class="section" id="about">
+    <div class="section-header">
+        <span class="section-label">Me</span>
+        <h2 class="section-title">About</h2>
+    </div>
 
-                <div class="about-stack">
-                    <h4 class="stack-title">Tools &amp; Tech</h4>
-                    <div class="stack-grid">
+    <div class="about-content">
+        <div class="about-text">
+            <p>
+                I'm a Data Engineer at <strong>REV Media Group</strong>, one of Malaysia's
+                leading digital media companies. I joined fresh out of university in
+                June 2021 with no prior industry experience — and have been building
+                production data systems on Google Cloud Platform ever since.
+            </p>
+            <p>
+                My day-to-day revolves around designing and maintaining ETL/ELT workflows
+                using <strong>Cloud Composer (Apache Airflow)</strong>, working with
+                <strong>BigQuery</strong> for large-scale analytics, and integrating AI/ML
+                capabilities via <strong>Vertex AI and Gemini APIs</strong>.
+            </p>
+            <p>
+                I care deeply about building systems that are reliable, cost-efficient,
+                and genuinely useful — whether the consumer is a Data Scientist, a
+                Data Analyst, or a product team shipping a feature.
+            </p>
+        </div>
 
-                        <div class="stack-group">
-                            <span class="stack-category">Languages</span>
-                            <div class="stack-items">
-                                <span class="stack-item">Python</span>
-                                <span class="stack-item">SQL</span>
-                            </div>
-                        </div>
-
-                        <div class="stack-group">
-                            <span class="stack-category">GCP</span>
-                            <div class="stack-items">
-                                <span class="stack-item">BigQuery</span>
-                                <span class="stack-item">Cloud Composer</span>
-                                <span class="stack-item">Cloud Storage</span>
-                                <span class="stack-item">Cloud Functions</span>
-                                <span class="stack-item">Vertex AI</span>
-                                <span class="stack-item">Looker Studio</span>
-                            </div>
-                        </div>
-
-                        <div class="stack-group">
-                            <span class="stack-category">Tools</span>
-                            <div class="stack-items">
-                                <span class="stack-item">Apache Airflow</span>
-                                <span class="stack-item">Elasticsearch</span>
-                                <span class="stack-item">Gemini API</span>
-                                <span class="stack-item">Git</span>
-                            </div>
-                        </div>
-
+        <div class="about-stack">
+            <h4 class="stack-title">Tools &amp; Tech</h4>
+            <div class="stack-grid">
+                {% for group in site.data.skills %}
+                <div class="stack-group">
+                    <span class="stack-category">{{ group.category }}</span>
+                    <div class="stack-items">
+                        {% for item in group.items %}
+                        <span class="stack-item">{{ item }}</span>
+                        {% endfor %}
                     </div>
                 </div>
+                {% endfor %}
             </div>
-        </section>
-
-    </main>
-
-    <!-- ── FOOTER ────────────────────────────────────────────── -->
-    <footer class="footer">
-        <p>© 2025 Akmal Shapii · Built with plain HTML, CSS &amp; JS</p>
-        <div class="footer-links">
-            <a href="mailto:akmal.shapii@gmail.com">Email</a>
-            <a href="https://linkedin.com/in/akmal-shapii/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://github.com/akmalshapii" target="_blank" rel="noopener">GitHub</a>
         </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-    <!-- Right-click disable -->
-    <script>
-        document.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-        });
-    </script>
-</body>
-
-</html>
+    </div>
+</section>

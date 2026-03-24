@@ -1,0 +1,40 @@
+---
+layout: default
+title: Writings
+description: Notes and writings on data engineering, GCP, and building reliable pipelines.
+---
+
+<div class="page-hero">
+    <div class="page-hero-label">Notes</div>
+    <h1 class="page-hero-title">Writings</h1>
+    <p class="page-hero-sub">Thoughts on data engineering, GCP, and building things that work.</p>
+</div>
+
+<section class="section" style="padding-top: 3rem;">
+    <div class="writings-list">
+        {% if site.posts.size > 0 %}
+        {% for post in site.posts %}
+        <a href="{{ post.url | relative_url }}" class="writing-item">
+            <span class="writing-date">{{ post.date | date: "%b %Y" }}</span>
+            <div class="writing-content">
+                <h3 class="writing-title">{{ post.title }}</h3>
+                {% if post.excerpt %}
+                <p class="writing-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+                {% endif %}
+            </div>
+        </a>
+        {% endfor %}
+        {% else %}
+        <div class="writing-item writing-item--placeholder">
+            <span class="writing-date">—</span>
+            <div class="writing-content">
+                <h3 class="writing-title">Nothing here yet</h3>
+                <p class="writing-excerpt">
+                    First post coming soon. I'll be writing about data engineering,
+                    GCP patterns, and lessons learned building pipelines at scale.
+                </p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
