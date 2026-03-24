@@ -1,0 +1,33 @@
+# ============================================================
+# Projects — edit this file to add/update projects
+# ============================================================
+# Each project has:
+#   title       — project name
+#   tags        — list of tech/tools used
+#   description — what the project does (1-2 sentences)
+#   company     — where it was built
+#   placeholder — set to true for "coming soon" cards (optional)
+# ============================================================
+
+- title: Advanced Analytics Pipeline
+  tags: [Gemini API, BigQuery, Airflow, Elasticsearch]
+  description: >
+    End-to-end content enrichment pipeline that generates keyword extraction,
+    sentiment analysis, and emotion detection for articles across REV Media
+    Group's sites — powered by Google's Gemini API and orchestrated via
+    Cloud Composer.
+  company: REV Media Group
+
+- title: Content Summary Metadata Pipeline
+  tags: [Gemini API, Cloud Storage, BigQuery, Airflow]
+  description: >
+    Designed and maintained a pipeline that prepares clean, up-to-date article
+    metadata for the Data Science team's content summarisation project —
+    enabling AI-generated summaries of articles at scale using Gemini API.
+  company: REV Media Group
+
+- title: More on the way
+  tags: [Coming soon]
+  description: This space is reserved for future projects. Check back soon.
+  company: "—"
+  placeholder: true

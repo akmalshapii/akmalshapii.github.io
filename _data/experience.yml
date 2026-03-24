@@ -1,0 +1,35 @@
+# ============================================================
+# Work Experience — edit this file to update your history
+# ============================================================
+
+- role: Data Engineer
+  company: REV Media Group
+  location: Kuala Lumpur, Malaysia
+  period_start: Jun 2021
+  period_end: Present
+  bullets:
+    - Design and maintain data pipelines using Google Cloud Composer (Apache Airflow 2.x) to orchestrate daily ETL/ELT workflows across BigQuery, Cloud Storage, and Elasticsearch.
+    - Built an advanced analytics pipeline integrating the Gemini API for automated keyword extraction, sentiment analysis, and emotion detection across millions of article records.
+    - Developed and maintained article metadata pipelines for the Data Science team, enabling the Content Summary project to generate AI-powered article summaries at scale.
+    - Implemented web scraping solutions using Selenium to automate data collection from external sources for use in downstream analytics workflows.
+    - Developed backend SQL logic to power real-time General Election data displayed during the MyUndi TV live broadcast, supporting high-visibility, time-sensitive data delivery.
+    - Led the migration of existing cron-scheduled data pipelines from a Google Compute Engine VM to Apache Airflow on Cloud Composer, improving pipeline observability, reliability, and maintainability.
+    - Work closely with Data Analysts and Data Scientists to model and deliver clean, reliable datasets in BigQuery for analytics and machine learning use cases.
+
+- role: Software Engineer Intern
+  company: Infopro Sdn Bhd
+  location: Malaysia
+  period_start: Feb 2019
+  period_end: Jul 2019
+  bullets:
+    - Conducted research on AI chatbot solutions for banking use cases, covering conversational design and Single Sign-On (SSO) integration.
+    - Built a proof-of-concept for Optical Character Recognition (OCR) using Tesseract OCR and OpenCV in Python.
+
+- role: IT Intern
+  company: UiTM Jasin Melaka
+  location: Melaka, Malaysia
+  period_start: Apr 2016
+  period_end: Jun 2016
+  bullets:
+    - Assisted the IT department with computer maintenance and hardware troubleshooting.
+    - Developed a proof-of-concept for an internal website using PHP.

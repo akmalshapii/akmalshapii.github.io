@@ -1,0 +1,12 @@
+# ============================================================
+# Skills & Technologies
+# ============================================================
+
+- category: Programming
+  items: [Python, SQL]
+
+- category: GCP Services
+  items: [BigQuery, Cloud Composer, Cloud Storage, Cloud Functions, Vertex AI, Looker Studio]
+
+- category: Tools & Platforms
+  items: [Apache Airflow, Elasticsearch, Gemini API, Selenium, Git, Bitbucket]

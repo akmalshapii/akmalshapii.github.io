@@ -1,0 +1,26 @@
+title: Akmal Shapii
+description: Data Engineer building data pipelines on Google Cloud Platform.
+author: Akmal Shapii
+email: akmal.shapii@gmail.com
+
+url: "https://akmalshapii.github.io"
+baseurl: ""
+
+# Social
+github_username: akmalshapii
+linkedin_username: akmal-shapii
+
+# Build settings
+markdown: kramdown
+permalink: /writings/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from build output
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .jekyll-cache

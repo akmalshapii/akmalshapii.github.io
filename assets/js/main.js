@@ -60,6 +60,3 @@ document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.remove('active');
     }
 });
-
-// ── DISABLE RIGHT CLICK ────────────────────────────────────
-document.addEventListener('contextmenu', e => e.preventDefault());
