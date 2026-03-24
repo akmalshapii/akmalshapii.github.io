@@ -16,7 +16,7 @@
     - Led the migration of existing cron-scheduled data pipelines from a Google Compute Engine VM to Apache Airflow on Cloud Composer, improving pipeline observability, reliability, and maintainability.
     - Work closely with Data Analysts and Data Scientists to model and deliver clean, reliable datasets in BigQuery for analytics and machine learning use cases.
 
-- role: Internship
+- role: Intern
   company: Infopro Sdn Bhd
   location: Petaling Jaya, Malaysia
   period_start: Feb 2019
@@ -25,7 +25,7 @@
     - Conducted research on AI chatbot solutions for banking use cases, covering conversational design and Single Sign-On (SSO) integration.
     - Built a proof-of-concept for Optical Character Recognition (OCR) using Tesseract OCR and OpenCV in Python.
 
-- role: Internship
+- role: Intern
   company: UiTM Jasin Melaka
   location: Melaka, Malaysia
   period_start: Apr 2016
